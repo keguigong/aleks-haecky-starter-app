@@ -8,17 +8,27 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/set_web_text"
+    <EditText
+        android:id="@+id/message_edit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/set_web_text_button" />
+        android:ems="10"
+        android:inputType="text" />
+    <Button
+        android:id="@+id/update_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_button" />
+
+    <Button
+        android:id="@+id/reload_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/reload_button" />
 
     <WebView
         android:id="@+id/web_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </WebView>
+        android:layout_height="match_parent" />
 
 </LinearLayout>

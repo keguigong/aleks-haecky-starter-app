@@ -12,5 +12,7 @@
     \n\nOnce, when I was camping in Canada, and very hungry, I even caught a large salmon with my hands.
     \n\nI\'ll be happy to teach you how to make your own aquarium.
     \nYou should ask someone else about fishing, though.\n\n</string>
-    <string name="set_web_text_button">SET WEB TEXT</string>
+    <string name="send_button">SEND TO WEB</string>
+    <string name="reload_button">RELOAD</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet id lacus quis elementum. Phasellus iaculis, lorem id sagittis efficitur, libero ligula eleifend felis, at hendrerit nunc diam vel ante. Praesent mattis feugiat tellus vitae pulvinar. Nulla sodales lacus et ante posuere, eget commodo dui ornare. Cras vestibulum hendrerit magna quis feugiat. Nam volutpat dolor vitae dolor consequat fermentum. Curabitur aliquet et sem a sollicitudin. Nulla a sapien sagittis, finibus massa vel, pharetra arcu. In vulputate quis lectus sit amet pulvinar. Duis imperdiet turpis tortor, vitae ullamcorper neque facilisis eget. Phasellus viverra, sapien nec tempor lacinia, nunc mi pharetra leo, non varius ex purus vitae massa. Fusce dapibus, quam quis sagittis sagittis, dolor nisl sollicitudin nulla, nec mattis elit nulla vel magna. Ut augue tortor, mollis id sodales a, molestie finibus dui. Praesent blandit aliquet odio, sit amet tincidunt ante blandit vel. Maecenas laoreet ultricies ante, a imperdiet libero sollicitudin id. Suspendisse laoreet pellentesque tellus nec cursus. Nunc sed interdum lorem.</string>
 </resources>
