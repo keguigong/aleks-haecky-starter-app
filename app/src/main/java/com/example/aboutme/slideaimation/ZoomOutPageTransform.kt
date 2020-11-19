@@ -1,4 +1,4 @@
-package com.example.aboutme
+package com.example.aboutme.slideaimation
 
 import android.view.View
 import androidx.viewpager2.widget.ViewPager2

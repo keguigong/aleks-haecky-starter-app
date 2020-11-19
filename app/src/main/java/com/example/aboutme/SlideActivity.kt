@@ -2,24 +2,34 @@ package com.example.aboutme
 
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-
-/**
- * The number of pages (wizard steps) to show in this demo.
- */
-private const val NUM_PAGES = 5
+import com.example.aboutme.slideaimation.DepthPageTransformer
+import com.example.aboutme.slideaimation.ZoomOutPageTransformer
+import timber.log.Timber
 
 class SlideActivity : AppCompatActivity() {
 
-    private val TAG = "SlideActivity"
-
     private lateinit var viewPager: ViewPager2
+
+    /**
+     * The web pages to be displayed
+     */
+    private val slideSourceList  = mutableListOf<SlideSource>(
+        SlideSource("text", "https://www.gatsbyjs.com/"),
+        SlideSource("text", "https://www.gatsbyjs.com/get-started/"),
+        SlideSource("text", "https://www.gatsbyjs.com/blog/"),
+        SlideSource("text","https://www.gatsbyjs.com/cloud"),
+        SlideSource("text", "https://www.gatsbyjs.com/resources/gatsby-days/"),
+        SlideSource("text", "https://www.gatsbyjs.com/dashboard/login/"),
+        SlideSource("text", "https://www.gatsbyjs.com/support/"),
+        SlideSource("text", "https://www.gatsbyjs.com/use-cases/e-commerce/"),
+        SlideSource("text", "https://www.gatsbyjs.com/pricing/"),
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +42,8 @@ class SlideActivity : AppCompatActivity() {
         viewPager = findViewById(R.id.pager)
 //        viewPager.setPageTransformer(ZoomOutPageTransformer())
 //        viewPager.setPageTransformer(DepthPageTransformer())
+
+        slideSourceList.shuffle()
 
         // The pager adapter, which provides the pages to the view pager widget.
         val pagerAdapter = SlideAdapter(this)
@@ -59,7 +71,7 @@ class SlideActivity : AppCompatActivity() {
             override fun onPageSelected(position: Int) {
                 // Updating "scroll position" when user scrolls manually
                 scrollPosition = position + 1
-                Log.d(TAG, "onPageSelected(): $position")
+                Timber.d("onPageSelected(): $position")
             }
 
             override fun onPageScrollStateChanged(state: Int) {
@@ -85,7 +97,8 @@ class SlideActivity : AppCompatActivity() {
             super.onBackPressed()
         } else {
             // Otherwise, select the previous step.
-            viewPager.currentItem = viewPager.currentItem - 1
+//            viewPager.currentItem = viewPager.currentItem - 1
+            super.onBackPressed()
         }
     }
 
@@ -94,9 +107,9 @@ class SlideActivity : AppCompatActivity() {
      * sequence.
      */
     private inner class SlideAdapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
-        override fun getItemCount(): Int = NUM_PAGES
+        override fun getItemCount(): Int = slideSourceList.size
 
-        override fun createFragment(position: Int): Fragment = SlideFragment(position)
+        override fun createFragment(position: Int): Fragment =
+            SlideFragment(position, slideSourceList.get(position))
     }
 }
-    

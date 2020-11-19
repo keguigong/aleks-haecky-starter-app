@@ -15,4 +15,15 @@
     <string name="send_button">SEND TO WEB</string>
     <string name="reload_button">RELOAD</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet id lacus quis elementum. Phasellus iaculis, lorem id sagittis efficitur, libero ligula eleifend felis, at hendrerit nunc diam vel ante. Praesent mattis feugiat tellus vitae pulvinar. Nulla sodales lacus et ante posuere, eget commodo dui ornare. Cras vestibulum hendrerit magna quis feugiat. Nam volutpat dolor vitae dolor consequat fermentum. Curabitur aliquet et sem a sollicitudin. Nulla a sapien sagittis, finibus massa vel, pharetra arcu. In vulputate quis lectus sit amet pulvinar. Duis imperdiet turpis tortor, vitae ullamcorper neque facilisis eget. Phasellus viverra, sapien nec tempor lacinia, nunc mi pharetra leo, non varius ex purus vitae massa. Fusce dapibus, quam quis sagittis sagittis, dolor nisl sollicitudin nulla, nec mattis elit nulla vel magna. Ut augue tortor, mollis id sodales a, molestie finibus dui. Praesent blandit aliquet odio, sit amet tincidunt ante blandit vel. Maecenas laoreet ultricies ante, a imperdiet libero sollicitudin id. Suspendisse laoreet pellentesque tellus nec cursus. Nunc sed interdum lorem.</string>
+    <string name="title_activity_web">WebActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="nav_web_event_button">WEB EVENT</string>
+    <string name="nav_slide_button">SLIDE</string>
 </resources>
