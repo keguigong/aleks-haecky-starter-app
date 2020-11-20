@@ -12,7 +12,7 @@ import com.example.aboutme.databinding.FragmentSlideBinding
 import timber.log.Timber
 
 class SlideFragment(
-    private val position: Int,
+    position: Int,
     private val slideSource: SlideSource
 ): Fragment() {
 
@@ -31,6 +31,7 @@ class SlideFragment(
             inflater,
             R.layout.fragment_slide, container, false
         )
+
         binding.bindThis = this
 
         webView = binding.webView

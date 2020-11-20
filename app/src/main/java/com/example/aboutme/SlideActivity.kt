@@ -23,7 +23,7 @@ class SlideActivity : AppCompatActivity() {
         SlideSource("text", "https://www.gatsbyjs.com/"),
         SlideSource("text", "https://www.gatsbyjs.com/get-started/"),
         SlideSource("text", "https://www.gatsbyjs.com/blog/"),
-        SlideSource("text","https://www.gatsbyjs.com/cloud"),
+        SlideSource("text", "https://www.gatsbyjs.com/cloud"),
         SlideSource("text", "https://www.gatsbyjs.com/resources/gatsby-days/"),
         SlideSource("text", "https://www.gatsbyjs.com/dashboard/login/"),
         SlideSource("text", "https://www.gatsbyjs.com/support/"),
@@ -110,6 +110,6 @@ class SlideActivity : AppCompatActivity() {
         override fun getItemCount(): Int = slideSourceList.size
 
         override fun createFragment(position: Int): Fragment =
-            SlideFragment(position, slideSourceList.get(position))
+            SlideFragment(position, slideSourceList[position])
     }
 }
